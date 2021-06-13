@@ -1,0 +1,5 @@
+
+hostname gns3_lab_r1
+int loopback1
+ ip address 10.1.1.1 255.255.255.255
+end

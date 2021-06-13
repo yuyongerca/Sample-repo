@@ -1,0 +1,8 @@
+
+hostname lab_r_1
+int e0/0
+ description connect to switch to LAN
+int e0/1
+ description connect to non
+end
+sh version | i register

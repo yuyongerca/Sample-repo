@@ -1,0 +1,5 @@
+ansible==2.9.2
+requests
+flask
+pyotp==2.3.0
+PyYAML

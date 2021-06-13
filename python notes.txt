@@ -1,0 +1,27 @@
+activate venv
+$ python -m venv py3-venv
+$ source py3-venv/Scripts/activate
+
+
+VS Code:
+to select a specific environment, use the Python: Select Interpreter command from the Command Palette (Ctrl+Shift+P).
+
+print ("11*5 equal to {}".format(multi(11,5))
+
+
+"{}".format(): The .format() method lets you insert named or unnamed placeholders {} in a string and then use the .format() method to insert values into those placeholders.
+"".split(): The .split() method lets you split a string into multiple strings using a separator that you provide as the delimiter.
+"".join(): The .join() method lets you put a sequence of strings together using, joining them with a separator that you provide.
+
+Example:
+>>> "My name is {}.".format("Alexander Hamilton")
+'My name is Alexander Hamilton.'
+>>> "My name is {name}, and there's a {howmany} things I haven't done.".format(name="Alexander Hamilton", howmany="million")
+"My name is Alexander Hamilton, and there's a million things I haven't done."
+>>> "a b c".split(" ")
+['a', 'b', 'c']
+>>> ",".join(['a', 'b', 'c'])
+'a,b,c'
+
+
+ Python is introspective. To look inside an object and see what names (attributes and methods) are defined inside it, just pass the object to the dir(<object>) function.

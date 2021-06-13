@@ -1,0 +1,7 @@
+conf t
+hostname lab_sw_1
+interface Ethernet3/3
+ description test config_file
+ no ip address
+ duplex auto
+end

@@ -1,14 +1,4 @@
-import pytest
+d_keys = ['hostname', 'location', 'vendor', 'model', 'IOS', 'IP']
+d_values = ['london_r1', '21 New Globe Walk', 'Cisco', '4451', '15.4', '10.255.0.1']
 
-
-def add5(v):
-    myval = v + 5
-    return myval
-
-def tests_add5():
-    r = add5(1)
-    assert r == 6
-    # r = add5(5)
-    # assert r == 10
-    # r = add5(10.102645)
-    # assert r == 15.102645
+print (list(zip(d_keys, d_values)))

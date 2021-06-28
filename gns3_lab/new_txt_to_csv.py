@@ -22,6 +22,9 @@ rowldst = []
 #     for d in data:
 #         mywriter.writerow(d)
 
+
+#use netmiko connect to cisco router and send show ip accounting result
+#to txt file
 cisco_device = {
     "device_type": "cisco_ios",
     "host": "192.168.1.201",
@@ -41,7 +44,7 @@ with open('ip_accounting.txt','wt') as file:
     file.write(output +'\n')
 
 
-
+#open txt file and export source and destination IP to lists
 with open('ip_accounting.txt','rt') as file:
     for line in file:
         for wordls in line.split('         '):
@@ -54,6 +57,9 @@ with open('ip_accounting.txt','rt') as file:
                         print (rowlsrc,rowldst)
                         print ("start new row")
                         new_row.clear()
+#create new CSV file and write the source/destination ip to csv file
+#csv.writerow only support one iterable, need to use "[]"and "," to have multiple iterables
+
 i = 0
 with open("ip_accountings.csv",'w') as outfile:
     write = csv.writer(outfile)
@@ -64,4 +70,4 @@ with open("ip_accountings.csv",'w') as outfile:
                 
                 
                 
-                
+        
